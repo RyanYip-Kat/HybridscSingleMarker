@@ -87,21 +87,26 @@ CCA（`LinearOperator` + `svds`，不物化 cells×cells 交叉协方差）或�
 ```mermaid
 flowchart LR
     subgraph 证据链 1
-        R1[参考数据] --> FE[每标签特征基因 G_c<br/>DE 风格 top‑N]
+        R1[参考数据] --> FE[每标签特征基因 G_c  
+DE 风格 top-N]
         FE --> S0[pysingle 首轮得分 S0]
     end
     subgraph 证据链 2
         DB[CellMarker 3.0] --> SC[范围内 marker]
-        FE --> P1["逐细胞先验 P&#91;cell,c&#93;<br/>G_c ∩ DB 中该细胞表达比例"]
+        FE --> P1["逐细胞先验 P[cell,c]<br/>G_c∩DB 中该细胞表达比例"]
         SC --> P1
     end
     S0 --> FUS
-    P1 --> FUS["F = S0 × 1 + λ_eff·P̂<br/>margin 门控 + 粗族先验"]
-    FUS --> FT[fine‑tuning]
-    FT --> CSTAR["c* 标签"]
-    CSTAR --> V["逐细胞验证 V<br/>c* 特征基因的 DB 支持比例"]
-    V --> CONF["hybrid_confidence<br/>= clip(F&#91;c*&#93;,0,1)·(0.5+0.5V)"]
-    CSTAR --> STATUS["hybrid_status<br/>c* 粗族 vs DB 预测粗族"]
+    P1 --> FUS["F = S0 × 1 + λ_eff·P̂  
+margin 门控 + 粗族先验"]
+    FUS --> FT[fine-tuning]
+    FT --> CSTAR[c* 标签]
+    CSTAR --> V[逐细胞验证 V  
+c* 特征基因的 DB 支持比例]
+    V --> CONF["hybrid_confidence  
+= clip(F[c*],0,1)·(0.5+0.5V)"]
+    CSTAR --> STATUS[hybrid_status  
+c* 粗族 vs DB 预测粗族]
 ```
 
 ### 3.2 逐细胞 DB 先验
