@@ -1,0 +1,5 @@
+metric,mean_delta,n_configs,n_improved,n_unchanged,n_degraded,wilcoxon_p
+accuracy,0.014917127071823244,2,2,0,0,0.5
+macro_f1,0.007974454131697561,2,2,0,0,0.5
+ari,0.03631724212553472,2,2,0,0,0.5
+nmi,0.023568691059884683,2,2,0,0,0.5

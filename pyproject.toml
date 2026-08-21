@@ -1,0 +1,68 @@
+# =============================================================================
+# hybridscsinglemarker — 混合细胞类型注释项目（单项目配置）
+#
+# 一个 root 项目承载一个顶层包 hybridscsinglemarker，其中**内嵌**两套底层包
+# 实现集中管理：
+#   - hybridscsinglemarker                  src/hybridscsinglemarker/  融合主包
+#   ├── hybridscsinglemarker.cellmarkerannot  src/hybridscsinglemarker/cellmarkerannot/
+#   │                                          CellMarker 3.0 DB 注释（含 data/*.parquet）
+#   └── hybridscsinglemarker.pysingle         src/hybridscsinglemarker/pysingle/
+#                                              SingleR/Seurat 参考注释
+#
+# 统一 src-layout；子包依赖父包 package-dir 解析，无需 find 遍历。
+# =============================================================================
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hybridscsinglemarker"
+version = "0.1.0"
+description = "Hybrid single-cell type annotation: fuses pysingle (SingleR/Seurat label transfer) with cellmarkerannot (CellMarker 3.0 DB evidence) into one consensus-annotation pipeline."
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["single-cell", "scRNA-seq", "cell-type", "annotation", "CellMarker", "SingleR", "Seurat", "hybrid"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+# 核心依赖来自两底层包的实际 import：
+#   cellmarkerannot: numpy scipy pandas numba pyarrow anndata
+#   pysingle:        numpy scipy anndata scikit-learn
+dependencies = [
+    "anndata",
+    "numpy",
+    "scipy",
+    "pandas",
+    "numba",
+    "pyarrow",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib"]
+test = ["pytest"]
+
+[tool.setuptools]
+# 顶层包 + 两个内嵌子包（显式列表，确定性高）
+packages = [
+    "hybridscsinglemarker",
+    "hybridscsinglemarker.cellmarkerannot",
+    "hybridscsinglemarker.pysingle",
+]
+
+[tool.setuptools.package-dir]
+hybridscsinglemarker = "src/hybridscsinglemarker"
+
+[tool.setuptools.package-data]
+# cellmarkerannot 随包携带 CellMarker 3.0 parquet 数据库 + manifest
+"hybridscsinglemarker.cellmarkerannot" = ["data/*.parquet", "data/*.json", "py.typed"]
+"hybridscsinglemarker.pysingle" = ["py.typed"]
+hybridscsinglemarker = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# 未安装时也能 import（全部在 src/ 下）
+pythonpath = ["src"]

@@ -1,0 +1,26 @@
+label,P
+ABC,1.0
+ASC,1.0
+CD14,1.0
+CD16,1.0
+CD4 Naive,1.0
+CD4 Tcm,1.0
+CD4 Tem,1.0
+CD4 Tex,1.0
+CD4 Treg,1.0
+CD4+CD8+,1.0
+CD4-CD8-,1.0
+CD8 CTL,1.0
+CD8 Naive,1.0
+CD8 Tem,1.0
+CD8 Tex,1.0
+Memory,1.0
+NK1,1.0
+NK2,1.0
+NK3,1.0
+Naive,1.0
+T-mito,1.0
+cDC1,1.0
+pDC,1.0
+Intermed,0.9350649350649349
+cDC2,0.8636363636363636

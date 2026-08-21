@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "params": {
+    "species": "Human",
+    "tissue": "Peripheral Blood",
+    "data_source": "Experiment",
+    "ref1": "pbmc50k_refdata.h5ad",
+    "ref1_label": "celltype",
+    "ref2": "pbmc3k_refdata.h5ad",
+    "ref2_label": "celltype.l2",
+    "query": "vkhQ8_querydata.h5ad",
+    "query_label": "celltype",
+    "ref1_cells": 0,
+    "ref2_cells": 0,
+    "query_cells": 0,
+    "seed": 0,
+    "lambda": null,
+    "confidence_threshold": 0.3,
+    "db_method": "weighted",
+    "feature_gene_top_n": 200,
+    "n_jobs": 32,
+    "scoring": "profile",
+    "top_n": 5,
+    "fine_tune": true,
+    "max_genes": 3000,
+    "max_cells_per_type": 300,
+    "ref_cap_seed": 0,
+    "rare_cell_threshold": 0.05,
+    "fusion_mode": "v_full",
+    "label_evidence": true
+  },
+  "scenarios": {
+    "pysingle_1ref": {
+      "n_cells": 58677,
+      "agreement_vs_truth": 0.9129255272599982,
+      "fine_ari": 0.5850628886673255,
+      "fine_nmi": 0.6573866191093957,
+      "rare_macro_f1": 0.29412102593843803,
+      "n_rare_cell_types": 14,
+      "confidence_mean": 0.040028446326121445,
+      "confidence_kind": "1 - pval",
+      "status_counts": {},
+      "elapsed_s": 31.27,
+      "top_labels": {
+        "CD14": 11320,
+        "CD4+CD8+": 5846,
+        "NK3": 5362,
+        "NK2": 5102,
+        "CD4 Naive": 4989,
+        "CD8 Naive": 3872,
+        "CD4 Tem": 3725,
+        "Intermed": 3184,
+        "Naive": 2654,
+        "CD16": 1750
+      }
+    },
+    "hybrid_1ref": {
+      "n_cells": 58677,
+      "agreement_vs_truth": 0.9129255272599982,
+      "fine_ari": 0.5850628886673255,
+      "fine_nmi": 0.6573866191093957,
+      "rare_macro_f1": 0.29412102593843803,
+      "n_rare_cell_types": 14,
+      "confidence_mean": 0.37320419738924043,
+      "confidence_kind": "confidence",
+      "status_counts": {
+        "unknown": 32028,
+        "low_confidence": 6463,
+        "consistent": 20186
+      },
+      "elapsed_s": 27.91,
+      "top_labels": {
+        "CD14": 11320,
+        "CD4+CD8+": 5846,
+        "NK3": 5362,
+        "NK2": 5102,
+        "CD4 Naive": 4989,
+        "CD8 Naive": 3872,
+        "CD4 Tem": 3725,
+        "Intermed": 3184,
+        "Naive": 2654,
+        "CD16": 1750
+      },
+      "flip_fine": {
+        "n_good": 0,
+        "n_bad": 0,
+        "n_both_ok": 31729,
+        "n_both_bad": 26948,
+        "flip_precision": NaN
+      },
+      "flip_coarse": {
+        "n_good": 0,
+        "n_bad": 0,
+        "n_both_ok": 52160,
+        "n_both_bad": 4975,
+        "flip_precision": NaN
+      },
+      "n_flipped": 0,
+      "twin_scenario": "pysingle_1ref",
+      "lambda_eff": 0.0,
+      "data_source": "Experiment",
+      "fusion_mode": "v_full",
+      "n_label_evidence": 25
+    },
+    "pysingle_2ref": {
+      "n_cells": 58677,
+      "agreement_vs_truth": 0.9008488667191739,
+      "fine_ari": 0.5103559210988874,
+      "fine_nmi": 0.6000739137987009,
+      "rare_macro_f1": 0.2584998543506173,
+      "n_rare_cell_types": 14,
+      "confidence_mean": 0.510387542053329,
+      "confidence_kind": "confidence",
+      "status_counts": {},
+      "elapsed_s": 127.06,
+      "top_labels": {
+        "CD14": 11062,
+        "CD4+CD8+": 5459,
+        "NK3": 5346,
+        "NK2": 5187,
+        "CD4 Tem": 4494,
+        "CD8 Naive": 4346,
+        "CD4 Naive": 4329,
+        "Naive": 2986,
+        "cDC2": 2386,
+        "CD16": 1818
+      }
+    },
+    "hybrid_2ref": {
+      "n_cells": 58677,
+      "agreement_vs_truth": 0.9044368600682594,
+      "fine_ari": 0.45964307573959795,
+      "fine_nmi": 0.5947430771942696,
+      "rare_macro_f1": 0.24854120199111954,
+      "n_rare_cell_types": 14,
+      "confidence_mean": 0.4577441184316625,
+      "confidence_kind": "confidence",
+      "status_counts": {
+        "unknown": 31613,
+        "low_confidence": 5667,
+        "consistent": 21397
+      },
+      "elapsed_s": 179.43,
+      "top_labels": {
+        "CD14": 9626,
+        "NK3": 5371,
+        "CD4+CD8+": 5365,
+        "NK2": 4903,
+        "CD4 Tem": 4660,
+        "CD4 Naive": 4474,
+        "CD8 Naive": 4399,
+        "CD16": 3385,
+        "Naive": 3183,
+        "cDC2": 2353
+      },
+      "flip_fine": {
+        "n_good": 1900,
+        "n_bad": 6452,
+        "n_both_ok": 26597,
+        "n_both_bad": 23728,
+        "flip_precision": 0.2274904214559387
+      },
+      "flip_coarse": {
+        "n_good": 1511,
+        "n_bad": 1575,
+        "n_both_ok": 50164,
+        "n_both_bad": 3885,
+        "flip_precision": 0.4896305897602074
+      },
+      "n_flipped": 8352,
+      "twin_scenario": "pysingle_2ref",
+      "lambda_eff": 0.3,
+      "data_source": "Experiment",
+      "fusion_mode": "v_full",
+      "n_label_evidence": 46
+    },
+    "cellmarkerannot_only": {
+      "n_cells": 58677,
+      "agreement_vs_truth": 0.4327119978997112,
+      "fine_ari": 0.4571069171783681,
+      "fine_nmi": 0.4790996062991291,
+      "rare_macro_f1": 0.0,
+      "n_rare_cell_types": 14,
+      "confidence_mean": 0.0820595184018853,
+      "confidence_kind": "confidence",
+      "status_counts": {
+        "db_only": 58677
+      },
+      "elapsed_s": 5.54,
+      "top_labels": {
+        "Lymphocyte": 12958,
+        "CD14 monocyte": 12846,
+        "Cytotoxic CD8 T cell": 7714,
+        "Other": 6668,
+        "Activated CD8+ T cell": 5597,
+        "Immature B cell": 3721,
+        "Activated memory CD8+ T cell": 2893,
+        "Effector memory CD8 T cell": 1828,
+        "CD16 monocyte": 1345,
+        "CD8 T cell": 1140
+      }
+    }
+  },
+  "total_elapsed_s": 464.12
+}

@@ -1,0 +1,28 @@
+{
+  "n_cells": 58677,
+  "n_predicted": 58677,
+  "coverage": 1.0,
+  "top_predictions": {
+    "CD14": 11224,
+    "CD4+CD8+": 7781,
+    "NK3": 5077,
+    "CD8 Naive": 4542,
+    "CD4 Tem": 3967,
+    "CD4 Naive": 3704,
+    "NK2": 3463,
+    "Naive": 2753,
+    "cDC2": 2163,
+    "Intermed": 1997
+  },
+  "confidence_mean": 0.418341661578509,
+  "confidence_median": 0.44122536036502613,
+  "confidence_ge_threshold": 0.7206571569780322,
+  "status_counts": {
+    "unknown": 30351,
+    "consistent": 20455,
+    "low_confidence": 7871
+  },
+  "db_consistency_agreement": 0.4827527438816552,
+  "lambda_eff_mean": null,
+  "elapsed_s": 227.7
+}

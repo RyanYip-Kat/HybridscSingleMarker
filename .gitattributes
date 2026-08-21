@@ -1,0 +1,6 @@
+src/hybridscsinglemarker/cellmarkerannot/data/all_cell_marker.parquet filter=lfs diff=lfs merge=lfs -text
+src/hybridscsinglemarker/cellmarkerannot/data/human_cell_marker.parquet filter=lfs diff=lfs merge=lfs -text
+src/hybridscsinglemarker/cellmarkerannot/data/manifest.json filter=lfs diff=lfs merge=lfs -text
+src/hybridscsinglemarker/cellmarkerannot/data/method_cell_marker.parquet filter=lfs diff=lfs merge=lfs -text
+src/hybridscsinglemarker/cellmarkerannot/data/mouse_cell_marker.parquet filter=lfs diff=lfs merge=lfs -text
+src/hybridscsinglemarker/cellmarkerannot/data/single_cell_marker.parquet filter=lfs diff=lfs merge=lfs -text

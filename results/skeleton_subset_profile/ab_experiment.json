@@ -1,0 +1,28 @@
+{
+  "experiment": {
+    "agreement": 0.8918,
+    "elapsed_s": 10.36,
+    "lambda_eff": 0.3
+  },
+  "all": {
+    "agreement": 0.8621,
+    "elapsed_s": 11.57,
+    "lambda_eff": 0.3
+  },
+  "delta_agreement": -0.029651593773165286,
+  "flip_fine": {
+    "n_good": 4,
+    "n_bad": 84,
+    "n_both_ok": 379,
+    "n_both_bad": 1024,
+    "flip_precision": 0.0455
+  },
+  "flip_coarse": {
+    "n_good": 7,
+    "n_bad": 54,
+    "n_both_ok": 1156,
+    "n_both_bad": 132,
+    "flip_precision": 0.1148
+  },
+  "n_flipped": 88
+}

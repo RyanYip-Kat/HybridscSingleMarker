@@ -1,0 +1,6 @@
+,B cell,CD8+ T cell,Mature natural killer cell,Mucosa-associated invariant T cell,Natural killer cell,Tissue resident macrophage
+PTPRC,0.0,0.0,0.0,0.0,0.0,1.0
+EOMES,0.0,1.0,1.0,0.0,2.0,0.0
+HLA-A,1.0,0.0,0.0,0.0,0.0,0.0
+TRAV1-2,0.0,0.0,0.0,2.0,0.0,0.0
+Score,0.2691625340891041,0.3817681385964148,1.2260291026866497,0.883609329675846,0.4547845367712109,1.3121460228680961

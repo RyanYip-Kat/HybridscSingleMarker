@@ -1,0 +1,47 @@
+label,P
+ABC,1.0
+ASC,1.0
+B intermediate,1.0
+B memory,1.0
+B naive,1.0
+CD14,1.0
+CD16,1.0
+CD16 Mono,1.0
+CD4 CTL,1.0
+CD4 Naive,1.0
+CD4 Proliferating,1.0
+CD4 TCM,1.0
+CD4 TEM,1.0
+CD4 Tcm,1.0
+CD4 Tem,1.0
+CD4 Tex,1.0
+CD4 Treg,1.0
+CD4+CD8+,1.0
+CD4-CD8-,1.0
+CD8 Naive,1.0
+CD8 Proliferating,1.0
+CD8 TCM,1.0
+CD8 TEM,1.0
+CD8 Tem,1.0
+CD8 Tex,1.0
+Intermed,1.0
+Memory,1.0
+NK,1.0
+NK Proliferating,1.0
+NK1,1.0
+NK2,1.0
+NK3,1.0
+Naive,1.0
+Plasmablast,1.0
+Platelet,1.0
+T-mito,1.0
+gdT,1.0
+pDC,1.0
+CD14 Mono,0.8571428571428571
+Treg,0.8571428571428571
+cDC1,0.8333333333333334
+ASDC,0.6666666666666666
+cDC2,0.6666666666666666
+MAIT,0.65
+NK_CD56bright,0.5454545454545454
+CD8 CTL,0.0
